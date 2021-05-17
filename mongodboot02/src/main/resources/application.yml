@@ -1,0 +1,21 @@
+server:
+  port: 8899
+  servlet:
+    context-path: /mg
+
+#mongodb配置
+spring:
+  data:
+    mongodb:
+      uri: mongodb://testrw:testrw@127.0.0.1:27017/myschool
+
+  application:
+    name: mymongodb
+#mongodb的sql日志
+logging:
+  level:
+    org:
+     springframework:
+      data:
+       mongodb:
+        core: DEBUG

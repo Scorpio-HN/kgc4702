@@ -1,0 +1,43 @@
+server:
+  port: 8888
+  servlet:
+    context-path: /sb
+    
+ 
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .jsp
+      
+    static-path-pattern: /**
+  
+  resources:
+    static-locations: classpath:/templates/,classpath:/META-NF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/upload/
+   #数据源
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ENC(54guAPUYrZNi2POYuQKd0wHZElbsR7d7g/8BS3VrJ4tVxrLthynZ+x0tLrCN/GwLnA2HBmHqUtPZq4nec+UkXQ==)
+    username: ENC(VSSw1WcmD648tEGBeChBBQ==)
+    password: ENC(fbtUm00h5jc1ja1nVLMreA==)
+#mybatis的配置
+mybatis:
+  #config-location: mybatis-config.xml 如果保留了这个配置文件可以这样配置
+  type-aliases-package: com.cssl.pojo
+  #mapper-locations: classpath:com/cssl/mapper/*.xml 也可以用注解扫描接口
+  configuration:
+    auto-mapping-behavior: full
+    use-generated-keys: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    
+#分页插件
+pagehelper:
+  reasonable: true
+  page-size-zero: true
+  
+#盐值
+jasypt:
+  encryptor:
+    password: EbfYkitulv73I2
+  
+    

@@ -1,0 +1,12 @@
+server:
+  servlet:
+    context-path: /md
+  port: 8888
+
+spring:
+  application:
+    name: spring-boot-mongodb
+  data:
+    mongodb:
+      uri: mongodb://testrw:testrw@192.168.88.144:27017/myschool
+

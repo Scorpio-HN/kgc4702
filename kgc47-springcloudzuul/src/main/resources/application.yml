@@ -1,0 +1,43 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: gateway-zuul
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    #password: root
+    database: 0
+    timeout: 10s  # 数据库连接超时时间，2.0 中该参数的类型为Duration，这里在配置的时候需要指明单位
+    # 连接池配置，2.0中直接使用jedis或者lettuce配置连接池
+    jedis:
+      pool:
+        max-idle: 50        # 最大空闲连接数
+        min-idle: 10        # 最小空闲连接数
+        max-wait:  -1s        # 等待可用连接的最大时间，负数为不限制
+        max-active: -1        # 最大活跃连接数，负数为不限制
+
+
+
+
+
+
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1.com:6062/eureka/
+
+zuul:
+  routes:
+    provider9091: /provider/*   #注意使用服务名
+    consumer8090: /consumer/*
+  prefix: /gateway                       #前缀
+  ignored-services: '*'                  #禁用服务名访问(内网不受该限制)
+  ignored-patterns: /**/cmap/**    #禁用某些路径
+  #sensitive-headers:  "*"                #解决走网关session变化
+  sensitive-headers: "*"
+
+

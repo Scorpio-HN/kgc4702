@@ -1,0 +1,20 @@
+server:
+  port: 4040
+spring:
+  application:
+    name: config-server
+  #gitee连接信息
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/bdqn_zhang/kgc47forcloud.git
+          #search-paths: config    #dev其他分支
+          search-paths: master    #master
+          username: 2093627508@qq.com
+          password: cssl#123
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6061/eureka/
+

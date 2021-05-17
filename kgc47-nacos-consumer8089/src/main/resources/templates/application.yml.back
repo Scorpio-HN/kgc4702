@@ -1,0 +1,47 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: nacos-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr:  127.0.0.1:8848
+    sentinel:
+      transport:
+        dashboard: 127.0.0.1:8080
+        port: 8719
+      eager: true
+#      datasource:
+#        ds:
+#          nacos:
+#            dataId: ${spring.application.name}-sentinel
+#            groupId: DEFAUL_GROUP
+#            rule-type: flow
+#            data-type: json
+#            server-addr: 127.0.0.1:8848
+  namespace: public
+
+feign:
+  sentinel:
+    enabled: true
+
+
+
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+nacos-provider: #服务名
+  ribbon:
+    #NFloadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule  #轮询
+    #NFloadBalancerRuleClassName: com.netflix.loadbalancer.WeightedResponseTimeRule
+    NFloadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule #随机

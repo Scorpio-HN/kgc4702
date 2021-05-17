@@ -1,0 +1,45 @@
+2021-03-19 14:33:59 -Starting Kgc47boot01Application using Java 1.8.0_20 on zrt with PID 21064 (D:\Resources\IdealPro\kgc4702\kgc47boot01\target\classes started by 20936 in D:\Resources\IdealPro\kgc4702)
+2021-03-19 14:33:59 -No active profile set, falling back to default profiles: default
+2021-03-19 14:33:59 -Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-03-19 14:33:59 -For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-03-19 14:34:03 -Post-processing PropertySource instances
+2021-03-19 14:34:03 -Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-03-19 14:34:03 -Converting PropertySource servletConfigInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:34:03 -Converting PropertySource servletContextInitParams [org.springframework.core.env.PropertySource$StubPropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:34:03 -Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:34:03 -Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:34:03 -Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:34:03 -Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:34:03 -Converting PropertySource devtools [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:34:04 -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-03-19 14:34:04 -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-03-19 14:34:04 -Tomcat initialized with port(s): 8888 (http)
+2021-03-19 14:34:04 -Initializing ProtocolHandler ["http-nio-8888"]
+2021-03-19 14:34:04 -Starting service [Tomcat]
+2021-03-19 14:34:04 -Starting Servlet engine: [Apache Tomcat/9.0.43]
+2021-03-19 14:34:04 -Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2021-03-19 14:34:04 -APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2021-03-19 14:34:04 -APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2021-03-19 14:34:04 -OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2021-03-19 14:34:05 -At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-03-19 14:34:05 -Initializing Spring embedded WebApplicationContext
+2021-03-19 14:34:05 -Root WebApplicationContext: initialization completed in 5502 ms
+2021-03-19 14:34:05 -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-03-19 14:34:05 -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2021-03-19 14:34:05 -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2021-03-19 14:34:05 -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2021-03-19 14:34:05 -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2021-03-19 14:34:05 -Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2021-03-19 14:34:05 -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-03-19 14:34:05 -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2021-03-19 14:34:06 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:34:07 -Adding welcome page: class path resource [static/index.html]
+2021-03-19 14:34:07 -LiveReload server is running on port 35729
+2021-03-19 14:34:07 -Starting ProtocolHandler ["http-nio-8888"]
+2021-03-19 14:34:08 -Tomcat started on port(s): 8888 (http) with context path '/sb'
+2021-03-19 14:34:08 -Started Kgc47boot01Application in 10.424 seconds (JVM running for 15.483)
+2021-03-19 14:34:36 -Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-03-19 14:34:36 -Initializing Servlet 'dispatcherServlet'
+2021-03-19 14:34:36 -Completed initialization in 1 ms
+2021-03-19 14:34:36 -HikariPool-1 - Starting...
+2021-03-19 14:34:37 -HikariPool-1 - Start completed.

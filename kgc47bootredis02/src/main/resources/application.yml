@@ -1,0 +1,17 @@
+server:
+  port: 8084
+  servlet:
+    context-path: /redis
+spring:
+  redis:
+    host: 192.168.88.146
+    port: 6379
+    password: 123456
+    timeout: 18s
+    jedis:
+      pool:
+        min-idle: 0
+        max-wait: 20
+        max-active: 8
+        max-idle: 8
+

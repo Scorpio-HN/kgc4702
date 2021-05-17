@@ -1,0 +1,16 @@
+server:
+  port: 5052
+spring:
+  application:
+    name: admin-server
+
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://admin:123@localhost:6060/eureka/
+      defaultZone: http://eureka1.com:6061/eureka/, http://eureka2.com:6062/eureka/
+    register-with-eureka: true #向eurek server 注册
+    fetch-registry: true #获取信息列表
+  server:
+    enable-self-preservation: false        #禁用保护,默认true
+    eviction-interval-timer-in-ms: 10000    #清理间隔（默认是60*1000）

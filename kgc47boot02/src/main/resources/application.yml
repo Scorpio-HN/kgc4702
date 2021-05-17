@@ -1,0 +1,16 @@
+server:
+  port: 7777
+  servlet:
+    context-path: /thy
+
+spring:
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+    mode: HTML
+  mvc:
+    static-path-pattern: /**
+
+  resources:
+    static-locations: classpath:/templates/,classpath:/META-NF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,classpath:/upload/

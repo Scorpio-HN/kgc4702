@@ -1,0 +1,81 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: consumer8090
+  mvc:
+    format:
+      date-time: yyyy-MM-dd HH:mm:ss
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+
+  boot:
+    admin:
+      client:
+        url: http://127.0.0.1:5052
+
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    #password: root
+    database: 0
+    timeout: 10s  # 数据库连接超时时间，2.0 中该参数的类型为Duration，这里在配置的时候需要指明单位
+    # 连接池配置，2.0中直接使用jedis或者lettuce配置连接池
+    jedis:
+      pool:
+        max-idle: 50        # 最大空闲连接数
+        min-idle: 10        # 最小空闲连接数
+        max-wait:  -1s        # 等待可用连接的最大时间，负数为不限制
+        max-active: -1        # 最大活跃连接数，负数为不限制
+
+
+
+
+
+eureka:
+  client:
+    service-url:
+      #defaultZone: http://admin:123@localhost:6060/eureka/
+      defaultZone: http://eureka1.com:6061/eureka/, http://eureka2.com:6062/eureka/
+    register-with-eureka: true #向eurek server 注册
+    fetch-registry: true #获取信息列表
+  server:
+    enable-self-preservation: false        #禁用保护,默认true
+    eviction-interval-timer-in-ms: 10000    #清理间隔（默认是60*1000）
+
+
+#provider9091: #服务名
+  #ribbon:
+    #NFloadBalancerRuleClassName: com.netflix.loadbalancer.RandomRule  #随机策略
+    #NFloadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule #轮询
+
+
+
+
+#服务降级的开关
+feign:
+  hystrix:
+    enabled: true
+
+
+
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+        #include: hystrix.stream
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        sleepWindowInMilliseconds: 5000   	#过多长时间，熔断器再次检测是否开启，默认为5000，即5s钟
+        errorThresholdPercentage: 50	#错误率，默认50%
+        forceOpen: false			#强制打开断路器，默认false(true打开后会强制断开服务)

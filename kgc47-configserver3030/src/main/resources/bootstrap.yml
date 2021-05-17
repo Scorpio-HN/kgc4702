@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: config-client
+  cloud:
+    config:
+      uri: http://localhost:4040  	#config server地址
+      profile: dev      #环境名 config-dev.yml
+      name: config-zuul		#gitee上文件名，不写默认服务名
+      label: master		#分支名称，如果不写就是默认主分支
+#暴露监控端点
+management:
+  server:
+    port: 3030
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:6061/eureka/
+

@@ -1,0 +1,17 @@
+server:
+  port: 6062
+spring:
+  application:
+    name: eureka6062
+eureka:
+  server:
+    enable-self-preservation: false        #禁用保护,默认true
+    eviction-interval-timer-in-ms: 10000    #清理间隔（默认是60*1000）
+  client:
+    fetch-registry: false #是否向eureka server获取列表信息
+    register-with-eureka: true #是否向eureka
+    service-url:
+      defaultZone: http://eureka1.com:6061/eureka/
+  instance:
+    hostname: eureka2.com
+

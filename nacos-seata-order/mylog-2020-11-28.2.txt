@@ -1,0 +1,394 @@
+NettyPool create channel to transactionRole:RMROLE,address:192.168.56.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql:///seata_order', applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'} >
+0101 can not connect to 192.168.56.1:8091 cause:can not register RM,err:register error,role:RMROLE,err:cost 30007 ms
+io.seata.common.exception.FrameworkException: can not register RM,err:register error,role:RMROLE,err:cost 30007 ms
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:210)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.RmRpcClient.registerResource(RmRpcClient.java:198)
+	at io.seata.rm.AbstractResourceManager.registerResource(AbstractResourceManager.java:120)
+	at io.seata.rm.datasource.DataSourceManager.registerResource(DataSourceManager.java:149)
+	at io.seata.rm.DefaultResourceManager.registerResource(DefaultResourceManager.java:114)
+	at io.seata.rm.datasource.DataSourceProxy.init(DataSourceProxy.java:91)
+	at io.seata.rm.datasource.DataSourceProxy.<init>(DataSourceProxy.java:80)
+	at io.seata.rm.datasource.DataSourceProxy.<init>(DataSourceProxy.java:69)
+	at com.cssl.DataSourceConfig.dataSourceProxy(DataSourceConfig.java:33)
+	at com.cssl.DataSourceConfig$$EnhancerBySpringCGLIB$$25649df3.CGLIB$dataSourceProxy$2(<generated>)
+	at com.cssl.DataSourceConfig$$EnhancerBySpringCGLIB$$25649df3$$FastClassBySpringCGLIB$$884ed4f3.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at com.cssl.DataSourceConfig$$EnhancerBySpringCGLIB$$25649df3.dataSourceProxy(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:650)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:635)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$111/914507705.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:884)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:788)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1176)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:556)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$111/914507705.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1509)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1404)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$111/914507705.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$111/914507705.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1307)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$111/914507705.getObject(Unknown Source)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at com.cssl.NacosSeataOrderApplication.main(NacosSeataOrderApplication.java:17)
+Bean[com.cssl.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$ee011c85] with name [orderServiceImpl] would use interceptor [io.seata.spring.annotation.GlobalTransactionalInterceptor]
+No URLs will be polled as dynamic configuration sources.
+To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+No URLs will be polled as dynamic configuration sources.
+To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+Initializing ExecutorService 'applicationTaskExecutor'
+Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+Starting ProtocolHandler ["http-nio-8111"]
+Tomcat started on port(s): 8111 (http) with context path ''
+nacos registry, DEFAULT_GROUP seata-order 192.168.43.61:8111 register finished
+wait response error:cost 30001 ms,ip:null,request:RegisterTMRequest{applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'}
+0304 register RM failed.
+io.seata.common.exception.FrameworkException: register error,role:TMROLE,err:cost 30001 ms
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:78)
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:34)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:206)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+channel valid false,channel:[id: 0xbd5572e1, L:0.0.0.0/0.0.0.0:62376 ! R:/192.168.56.1:8091]
+0101 can not connect to 192.168.56.1:8091 cause:can not register RM,err:register error,role:TMROLE,err:cost 30001 ms
+io.seata.common.exception.FrameworkException: can not register RM,err:register error,role:TMROLE,err:cost 30001 ms
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:210)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+will destroy channel:[id: 0xbd5572e1, L:0.0.0.0/0.0.0.0:62376 ! R:/192.168.56.1:8091]
+ChannelHandlerContext(TmRpcClient#0, [id: 0xbd5572e1, L:0.0.0.0/0.0.0.0:62376 ! R:/192.168.56.1:8091]) will closed
+ChannelHandlerContext(TmRpcClient#0, [id: 0xbd5572e1, L:0.0.0.0/0.0.0.0:62376 ! R:/192.168.56.1:8091]) will closed
+will connect to 192.168.56.1:8091
+NettyPool create channel to transactionRole:TMROLE,address:192.168.56.1:8091,msg:< RegisterTMRequest{applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'} >
+channel inactive: [id: 0x95daab23, L:0.0.0.0/0.0.0.0:62424 ! R:/192.168.56.1:8091]
+Started NacosSeataOrderApplication in 39.078 seconds (JVM running for 40.231)
+0304 register RM failed.
+io.seata.common.exception.FrameworkException: can not connect to services-server.
+	at io.seata.core.rpc.netty.RpcClientBootstrap.getNewChannel(RpcClientBootstrap.java:195)
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:58)
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:34)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:206)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: io.seata.common.exception.FrameworkException: connect failed, can not connect to services-server.
+	at io.seata.core.rpc.netty.RpcClientBootstrap.getNewChannel(RpcClientBootstrap.java:190)
+	... 15 common frames omitted
+channel valid false,channel:[id: 0xcd24d723, L:0.0.0.0/0.0.0.0:62373 ! R:/192.168.56.1:8091]
+will destroy channel:[id: 0xcd24d723, L:0.0.0.0/0.0.0.0:62373 ! R:/192.168.56.1:8091]
+0101 can not connect to 192.168.56.1:8091 cause:can not register RM,err:can not connect to services-server.
+io.seata.common.exception.FrameworkException: can not register RM,err:can not connect to services-server.
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:210)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+ChannelHandlerContext(RmRpcClient#0, [id: 0xcd24d723, L:0.0.0.0/0.0.0.0:62373 ! R:/192.168.56.1:8091]) will closed
+ChannelHandlerContext(RmRpcClient#0, [id: 0xcd24d723, L:0.0.0.0/0.0.0.0:62373 ! R:/192.168.56.1:8091]) will closed
+will connect to 192.168.56.1:8091
+RM will register :jdbc:mysql:///seata_order
+NettyPool create channel to transactionRole:RMROLE,address:192.168.56.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql:///seata_order', applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'} >
+ChannelHandlerContext(RmRpcClient#0, [id: 0x1a208aed]) will closed
+ChannelHandlerContext(RmRpcClient#0, [id: 0xb2c16bdb]) will closed
+0304 register RM failed.
+io.seata.common.exception.FrameworkException: can not connect to services-server.
+	at io.seata.core.rpc.netty.RpcClientBootstrap.getNewChannel(RpcClientBootstrap.java:195)
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:58)
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:34)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:206)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: io.seata.common.exception.FrameworkException: connect failed, can not connect to services-server.
+	at io.seata.core.rpc.netty.RpcClientBootstrap.getNewChannel(RpcClientBootstrap.java:190)
+	... 15 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.56.1:8091
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+0101 can not connect to 192.168.56.1:8091 cause:can not register RM,err:can not connect to services-server.
+io.seata.common.exception.FrameworkException: can not register RM,err:can not connect to services-server.
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:210)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+will connect to 192.168.56.1:8091
+RM will register :jdbc:mysql:///seata_order
+NettyPool create channel to transactionRole:RMROLE,address:192.168.56.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql:///seata_order', applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'} >
+ChannelHandlerContext(RmRpcClient#0, [id: 0xe425e98a]) will closed
+0304 register RM failed.
+io.seata.common.exception.FrameworkException: can not connect to services-server.
+	at io.seata.core.rpc.netty.RpcClientBootstrap.getNewChannel(RpcClientBootstrap.java:195)
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:58)
+	at io.seata.core.rpc.netty.NettyPoolableFactory.makeObject(NettyPoolableFactory.java:34)
+	at org.apache.commons.pool.impl.GenericKeyedObjectPool.borrowObject(GenericKeyedObjectPool.java:1220)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:206)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: io.seata.common.exception.FrameworkException: connect failed, can not connect to services-server.
+	at io.seata.core.rpc.netty.RpcClientBootstrap.getNewChannel(RpcClientBootstrap.java:190)
+	... 15 common frames omitted
+Caused by: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /192.168.56.1:8091
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(Unknown Source)
+	at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:330)
+	at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:334)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:702)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:650)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:576)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:493)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:989)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+0101 can not connect to 192.168.56.1:8091 cause:can not register RM,err:can not connect to services-server.
+io.seata.common.exception.FrameworkException: can not register RM,err:can not connect to services-server.
+	at io.seata.core.rpc.netty.NettyClientChannelManager.doConnect(NettyClientChannelManager.java:210)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.acquireChannel(NettyClientChannelManager.java:103)
+	at io.seata.core.rpc.netty.NettyClientChannelManager.reconnect(NettyClientChannelManager.java:175)
+	at io.seata.core.rpc.netty.AbstractRpcRemotingClient$1.run(AbstractRpcRemotingClient.java:112)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.runAndReset(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(Unknown Source)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.lang.Thread.run(Unknown Source)
+will connect to 192.168.56.1:8091
+RM will register :jdbc:mysql:///seata_order
+NettyPool create channel to transactionRole:RMROLE,address:192.168.56.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql:///seata_order', applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'} >
+register RM success. server version:1.0.0,channel:[id: 0xf7b76d81, L:/192.168.56.1:62525 - R:/192.168.56.1:8091]
+register success, cost 61 ms, version:1.0.0,role:RMROLE,channel:[id: 0xf7b76d81, L:/192.168.56.1:62525 - R:/192.168.56.1:8091]
+HV000001: Hibernate Validator 6.0.21.Final
+No active profile set, falling back to default profiles: default
+BeanFactory id=ae6fb061-e115-313f-925b-40d30572bd04
+Bean 'com.cssl.feign.FeignAccountClient' of type [org.springframework.cloud.openfeign.FeignClientFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'spring.cloud.alibaba.seata-io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration' of type [io.seata.spring.boot.autoconfigure.properties.SpringCloudAlibabaConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'seataProperties' of type [io.seata.spring.boot.autoconfigure.properties.SeataProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'io.seata.spring.boot.autoconfigure.SeataAutoConfiguration' of type [io.seata.spring.boot.autoconfigure.SeataAutoConfiguration$$EnhancerBySpringCGLIB$$549ec02c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'springUtils' of type [io.seata.spring.boot.autoconfigure.util.SpringUtils] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Automatically configure Seata
+The file name of the operation is registry.conf
+load ExtConfigurationProvider[null] extension by class[io.seata.spring.boot.autoconfigure.provider.SpringBootConfigurationProvider]
+load extConfiguration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+Bean 'configProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'configFileProperties' of type [io.seata.spring.boot.autoconfigure.properties.registry.ConfigFileProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+The file name of the operation is file.conf
+load extConfiguration:FileConfiguration$$EnhancerByCGLIB$$862af1eb
+Bean 'serviceProperties' of type [io.seata.spring.boot.autoconfigure.properties.file.ServiceProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Initializing Global Transaction Clients ... 
+Could not found property transport.thread-factory.boss-thread-prefix, try to use default value instead.
+Could not found property transport.thread-factory.worker-thread-prefix, try to use default value instead.
+Could not found property transport.thread-factory.share-boss-worker, try to use default value instead.
+Bean 'transportProperties' of type [io.seata.spring.boot.autoconfigure.properties.file.TransportProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Could not found property transport.thread-factory.worker-thread-size, try to use default value instead.
+RpcClientBootstrap has started
+Transaction Manager Client is initialized. applicationId[seata-order] txServiceGroup[bdqn_tx_group]
+Bean 'clientProperties' of type [io.seata.spring.boot.autoconfigure.properties.file.ClientProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Async Commit Buffer Limit: 10000
+RpcClientBootstrap has started
+Resource Manager is initialized. applicationId[seata-order] txServiceGroup[bdqn_tx_group]
+Global Transaction Clients are initialized. 
+Bean 'com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration' of type [com.alibaba.cloud.seata.feign.SeataFeignClientAutoConfiguration$FeignBeanPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Bean 'seataFeignObjectWrapper' of type [com.alibaba.cloud.seata.feign.SeataFeignObjectWrapper] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+Tomcat initialized with port(s): 8111 (http)
+Initializing ProtocolHandler ["http-nio-8111"]
+Starting service [Tomcat]
+Starting Servlet engine: [Apache Tomcat/9.0.39]
+Loaded Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+Initializing Spring embedded WebApplicationContext
+Root WebApplicationContext: initialization completed in 1489 ms
+{dataSource-1} inited
+load RegistryProvider[Nacos] extension by class[io.seata.discovery.registry.nacos.NacosRegistryProvider]
+will connect to 192.168.56.1:8091
+RM will register :jdbc:mysql:///seata_order
+NettyPool create channel to transactionRole:RMROLE,address:192.168.56.1:8091,msg:< RegisterRMRequest{resourceIds='jdbc:mysql:///seata_order', applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'} >
+load Codec[SEATA] extension by class[io.seata.codec.seata.SeataCodec]
+register RM success. server version:1.0.0,channel:[id: 0x5b08c14f, L:/192.168.56.1:62737 - R:/192.168.56.1:8091]
+register success, cost 42 ms, version:1.0.0,role:RMROLE,channel:[id: 0x5b08c14f, L:/192.168.56.1:62737 - R:/192.168.56.1:8091]
+Bean[com.cssl.service.impl.OrderServiceImpl$$EnhancerBySpringCGLIB$$cc066db9] with name [orderServiceImpl] would use interceptor [io.seata.spring.annotation.GlobalTransactionalInterceptor]
+No URLs will be polled as dynamic configuration sources.
+To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+No URLs will be polled as dynamic configuration sources.
+To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+Initializing ExecutorService 'applicationTaskExecutor'
+Initializing ExecutorService 'Nacso-Watch-Task-Scheduler'
+Starting ProtocolHandler ["http-nio-8111"]
+Tomcat started on port(s): 8111 (http) with context path ''
+nacos registry, DEFAULT_GROUP seata-order 192.168.43.61:8111 register finished
+will connect to 192.168.56.1:8091
+NettyPool create channel to transactionRole:TMROLE,address:192.168.56.1:8091,msg:< RegisterTMRequest{applicationId='seata-order', transactionServiceGroup='bdqn_tx_group'} >
+register success, cost 6 ms, version:1.0.0,role:TMROLE,channel:[id: 0x592c8335, L:/192.168.56.1:62745 - R:/192.168.56.1:8091]
+Started NacosSeataOrderApplication in 9.076 seconds (JVM running for 10.203)
+Initializing Spring DispatcherServlet 'dispatcherServlet'
+Initializing Servlet 'dispatcherServlet'
+Completed initialization in 5 ms
+load ContextCore[null] extension by class[io.seata.core.context.ThreadLocalContextCore]
+load TransactionManager[null] extension by class[io.seata.tm.DefaultTransactionManager]
+TransactionManager Singleton io.seata.tm.DefaultTransactionManager@1e45461
+load LoadBalance[null] extension by class[io.seata.discovery.loadbalance.RandomLoadBalance]
+Begin new global transaction [192.168.56.1:8091:2060258182]
+====开始新增订单====
+====结束新增订单====
+====开始修改账户====
+Flipping property: seata-account.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+Client: seata-account instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=seata-account,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+Using serverListUpdater PollingServerListUpdater
+Flipping property: seata-account.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+DynamicServerListLoadBalancer for client seata-account initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=seata-account,current list of Servers=[192.168.43.61:7111],Load balancer stats=Zone stats: {unknown=[Zone:unknown;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:192.168.43.61:7111;	Zone:UNKNOWN;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Thu Jan 01 08:00:00 GMT+08:00 1970;	First connection made: Thu Jan 01 08:00:00 GMT+08:00 1970;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:com.alibaba.cloud.nacos.ribbon.NacosServerList@310b07e3
+====结束修改账户====
+====开始修改订单====
+====结束修改订单====
+load [io.seata.rm.datasource.undo.parser.ProtostuffUndoLogParser] class fail. io/protostuff/runtime/RuntimeEnv
+load UndoLogParser[jackson] extension by class[io.seata.rm.datasource.undo.parser.JacksonUndoLogParser]
+[192.168.56.1:8091:2060258182] commit status: Committed
+onMessage:xid=192.168.56.1:8091:2060258182,branchId=2060258184,branchType=AT,resourceId=jdbc:mysql:///seata_order,applicationData=null
+Branch committing: 192.168.56.1:8091:2060258182 2060258184 jdbc:mysql:///seata_order null
+Branch commit result: PhaseTwo_Committed
+Flipping property: seata-account.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+onMessage:UndoLogDeleteRequest{resourceId='jdbc:mysql:///seata_order', saveDays=7, branchType=AT}

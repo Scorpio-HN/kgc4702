@@ -1,0 +1,13 @@
+
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 127.0.0.1:8848
+#  profiles:
+server:
+  port: 6677
+#    active: test

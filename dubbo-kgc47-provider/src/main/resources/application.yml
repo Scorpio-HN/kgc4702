@@ -1,0 +1,36 @@
+server:
+  port: 9080
+dubbo:
+  application:
+    name: users-provider9080
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  metadata-report:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.cssl.service.impl
+  protocol:
+    name: dubbo
+    port: 20888
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dubbodb?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: ROOT
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm
+    time-zone: GMT+8
+
+mybatis:
+  type-aliases-package: com.cssl.pojo
+  configuration:
+    auto-mapping-behavior: full
+    use-generated-keys: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+pagehelper:
+  auto-dialect: true
+  page-size-zero: true
+  reasonable: true

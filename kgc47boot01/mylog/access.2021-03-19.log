@@ -1,0 +1,144 @@
+2021-03-19 14:41:37 -Starting Kgc47boot01ApplicationTests using Java 1.8.0_20 on zrt with PID 4200 (started by 20936 in D:\Resources\IdealPro\kgc4702\kgc47boot01)
+2021-03-19 14:41:37 -No active profile set, falling back to default profiles: default
+2021-03-19 14:41:38 -Post-processing PropertySource instances
+2021-03-19 14:41:38 -Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-03-19 14:41:38 -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:41:38 -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:41:38 -Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:41:38 -Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:41:38 -Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:41:38 -Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:41:39 -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-03-19 14:41:39 -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-03-19 14:41:39 -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-03-19 14:41:39 -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2021-03-19 14:41:39 -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2021-03-19 14:41:39 -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2021-03-19 14:41:39 -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2021-03-19 14:41:39 -Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2021-03-19 14:41:39 -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-03-19 14:41:39 -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2021-03-19 14:41:39 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:41:40 -Adding welcome page: class path resource [static/index.html]
+2021-03-19 14:41:40 -Started Kgc47boot01ApplicationTests in 4.339 seconds (JVM running for 6.347)
+2021-03-19 14:41:41 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:44:21 -Starting Kgc47boot01ApplicationTests using Java 1.8.0_20 on zrt with PID 14972 (started by 20936 in D:\Resources\IdealPro\kgc4702\kgc47boot01)
+2021-03-19 14:44:21 -No active profile set, falling back to default profiles: default
+2021-03-19 14:44:22 -Post-processing PropertySource instances
+2021-03-19 14:44:22 -Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-03-19 14:44:22 -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:44:22 -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:44:22 -Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:44:22 -Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:44:22 -Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:44:22 -Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:44:23 -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-03-19 14:44:23 -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-03-19 14:44:23 -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-03-19 14:44:23 -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2021-03-19 14:44:23 -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2021-03-19 14:44:23 -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2021-03-19 14:44:23 -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2021-03-19 14:44:23 -Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2021-03-19 14:44:23 -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-03-19 14:44:23 -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2021-03-19 14:44:23 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:44:24 -Adding welcome page: class path resource [static/index.html]
+2021-03-19 14:44:24 -Started Kgc47boot01ApplicationTests in 3.266 seconds (JVM running for 4.517)
+2021-03-19 14:44:24 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:45:53 -Starting Kgc47boot01ApplicationTests using Java 1.8.0_20 on zrt with PID 17440 (started by 20936 in D:\Resources\IdealPro\kgc4702\kgc47boot01)
+2021-03-19 14:45:53 -No active profile set, falling back to default profiles: default
+2021-03-19 14:45:54 -Post-processing PropertySource instances
+2021-03-19 14:45:54 -Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-03-19 14:45:54 -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:45:54 -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:45:54 -Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:45:54 -Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:45:54 -Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:45:54 -Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:45:54 -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-03-19 14:45:54 -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-03-19 14:45:54 -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-03-19 14:45:54 -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2021-03-19 14:45:54 -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2021-03-19 14:45:54 -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2021-03-19 14:45:54 -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2021-03-19 14:45:54 -Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2021-03-19 14:45:54 -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-03-19 14:45:54 -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2021-03-19 14:45:55 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:45:55 -Adding welcome page: class path resource [static/index.html]
+2021-03-19 14:45:56 -Started Kgc47boot01ApplicationTests in 2.994 seconds (JVM running for 4.081)
+2021-03-19 14:45:56 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:47:34 -Starting Kgc47boot01ApplicationTests using Java 1.8.0_20 on zrt with PID 13864 (started by 20936 in D:\Resources\IdealPro\kgc4702\kgc47boot01)
+2021-03-19 14:47:34 -No active profile set, falling back to default profiles: default
+2021-03-19 14:47:35 -Post-processing PropertySource instances
+2021-03-19 14:47:35 -Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-03-19 14:47:35 -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:35 -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:35 -Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:35 -Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:35 -Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:47:35 -Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:35 -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-03-19 14:47:35 -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-03-19 14:47:35 -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-03-19 14:47:35 -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2021-03-19 14:47:35 -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2021-03-19 14:47:35 -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2021-03-19 14:47:35 -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2021-03-19 14:47:35 -Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2021-03-19 14:47:35 -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-03-19 14:47:35 -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2021-03-19 14:47:36 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:47:36 -Adding welcome page: class path resource [static/index.html]
+2021-03-19 14:47:37 -Started Kgc47boot01ApplicationTests in 2.919 seconds (JVM running for 3.94)
+2021-03-19 14:47:37 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:47:50 -Starting Kgc47boot01ApplicationTests using Java 1.8.0_20 on zrt with PID 24780 (started by 20936 in D:\Resources\IdealPro\kgc4702\kgc47boot01)
+2021-03-19 14:47:50 -No active profile set, falling back to default profiles: default
+2021-03-19 14:47:52 -Post-processing PropertySource instances
+2021-03-19 14:47:52 -Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-03-19 14:47:52 -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:52 -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:52 -Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:52 -Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:52 -Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:47:52 -Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:47:52 -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-03-19 14:47:52 -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-03-19 14:47:52 -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-03-19 14:47:52 -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2021-03-19 14:47:52 -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2021-03-19 14:47:52 -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2021-03-19 14:47:52 -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2021-03-19 14:47:52 -Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2021-03-19 14:47:52 -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-03-19 14:47:52 -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2021-03-19 14:47:53 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:47:53 -Adding welcome page: class path resource [static/index.html]
+2021-03-19 14:47:53 -Started Kgc47boot01ApplicationTests in 3.603 seconds (JVM running for 4.959)
+2021-03-19 14:47:54 -Shutting down ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:48:57 -Starting Kgc47boot01ApplicationTests using Java 1.8.0_20 on zrt with PID 19888 (started by 20936 in D:\Resources\IdealPro\kgc4702\kgc47boot01)
+2021-03-19 14:48:57 -No active profile set, falling back to default profiles: default
+2021-03-19 14:48:57 -Post-processing PropertySource instances
+2021-03-19 14:48:57 -Converting PropertySource configurationProperties [org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource] to AOP Proxy
+2021-03-19 14:48:57 -Converting PropertySource test [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:48:57 -Converting PropertySource Inlined Test Properties [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:48:57 -Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:48:57 -Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:48:57 -Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+2021-03-19 14:48:57 -Converting PropertySource Config resource 'class path resource [application.yml]' via location 'optional:classpath:/' [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+2021-03-19 14:48:58 -Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+2021-03-19 14:48:58 -Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+2021-03-19 14:48:58 -String Encryptor custom Bean not found with name 'jasyptStringEncryptor'. Initializing Default String Encryptor
+2021-03-19 14:48:58 -Encryptor config not found for property jasypt.encryptor.algorithm, using default value: PBEWithMD5AndDES
+2021-03-19 14:48:58 -Encryptor config not found for property jasypt.encryptor.keyObtentionIterations, using default value: 1000
+2021-03-19 14:48:58 -Encryptor config not found for property jasypt.encryptor.poolSize, using default value: 1
+2021-03-19 14:48:58 -Encryptor config not found for property jasypt.encryptor.providerName, using default value: null
+2021-03-19 14:48:58 -Encryptor config not found for property jasypt.encryptor.providerClassName, using default value: null
+2021-03-19 14:48:58 -Encryptor config not found for property jasypt.encryptor.saltGeneratorClassname, using default value: org.jasypt.salt.RandomSaltGenerator
+2021-03-19 14:48:58 -Encryptor config not found for property jasypt.encryptor.stringOutputType, using default value: base64
+2021-03-19 14:48:58 -Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-19 14:48:59 -Adding welcome page: class path resource [static/index.html]
+2021-03-19 14:48:59 -Started Kgc47boot01ApplicationTests in 2.896 seconds (JVM running for 3.996)
+2021-03-19 14:48:59 -Shutting down ExecutorService 'applicationTaskExecutor'

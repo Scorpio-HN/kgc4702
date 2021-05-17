@@ -1,0 +1,35 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: gate-way7070
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true         # 让gateway通过服务发现组件找到其他的微服务
+      routes:
+        - id: gate-nacos-consumer        # 唯一标识，通常使用服务id
+          uri: lb://nacos-consumer  # lb代表从注册中心获取服务，lb是Load Balance的缩写
+          predicates:               # 断言
+            - Path=/*        # 匹配转发路径
+            #- After=2021-05-13T15:41:01.223+08:00[GMT+08:00]
+            #- Header=sb,youbigsb
+            #- Method=GET
+            #- Query=green,sb
+          filters:
+            - AddRequestHeader=X-Request-color, blue
+            - AddRequestParameter=color, pink
+
+
+
+
+        - id: gate-nacos-provider
+          uri: lb://nacos-provider  # 也可以写http://127.0.0.1:7011(不能负载均衡)
+          predicates:
+            - Path=/provider/*        # 匹配转发路径，注意和上面路径区分开(如果两个服务路径相同会死循环)
+            - Method=GET,POST         # 匹配请求方法

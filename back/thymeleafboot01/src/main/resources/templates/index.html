@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .odd{background-color: aqua}
+    </style>
+
+    <script th:inline="javascript">
+        var message=[[${mess}]];
+        alert("后台信息："+message);
+    </script>
+</head>
+<body>
+<h1>访问hello/index.html</h1>
+<p th:text="${mess}" >张三</p>
+<p th:text="'hello'+${mess}+',你是sb吗？'">李四</p>
+
+<h1>访问session:注意如果存在session要求必须写session关键字</h1>
+<div th:text="${session.student.sname}"
+     th:style="'width:'+@{${count}/${totalNum}*100}+'%;height:30px;border: 1px solid red;background-color: yellow'" >
+    默认空div
+</div>
+
+<H1>测试集合循环</H1>
+<table border="1" width="800px">
+    <tr>
+        <th>序号</th>
+        <th>ID</th>
+        <th>姓名</th>
+        <th>日期1</th>
+        <th>日期2</th>
+        <th>判断1</th>
+        <th>判断2</th>
+    </tr>
+
+
+    <tr th:each="stu, stuState:${stuList}" th:class="${stuState.odd}?'odd'">
+        <td th:text="${stuState.index}">1</td>
+        <td th:text="${stu.sid}">101</td>
+        <td th:text="${stu.sname}">张三</td>
+        <td th:text="${stu.bornDate}">2020-08-02</td>
+        <td th:text="${#dates.format(stu.bornDate, 'yyyy-MM-dd')}">2020-08-01</td>
+        <td th:text="${stuState.index}%2==0?'偶数':'奇数'">偶数</td>
+
+        <!--if else-->
+        <td th:if="${stuState.index} lt 2" th:text="大于">大</td>
+        <td th:unless="${stuState.index} lt 2" th:text="小于">小于</td>
+    </tr>
+</table>
+
+<hr/>
+
+<h1>测试下拉框</h1>
+
+<select id="sec1">
+    <option value="0">-请选择-</option>
+    <option th:each="c:${citys}" th:value="${c}" th:text="${c}">长沙</option>
+
+</select>
+
+<h1>显示集合中对象属性</h1>
+<select id="sec2" >
+    <option value="0">-请选择-</option>
+    <option th:each="stu:${stuList}" th:value="${stu.sid}" th:text="${stu.sname}">长沙</option>
+</select>
+
+<h1>显示集合中对象属性--带回显</h1>
+<select id="sec3" th:field="*{obj.sid}">
+    <option value="0">-请选择-</option>
+    <option th:each="stu:${stuList}" th:value="${stu.sid}" th:text="${stu.sname}">长沙</option>
+</select>
+
+<hr/> findByid/lisi?sid=104&name=zhansan
+<img src="http://127.0.0.1:8080/thy/images/g1.jpg" th:src="@{${imagePath}}" alt="无法加载"/><br/>
+<a th:href="@{'/findByid/'+${obj.sname}(sid=${obj.sid},name=${obj.sname})}">随便玩玩</a>
+
+<hr/>
+<h1>数据格式</h1>
+<h2 th:text="${#numbers.formatDecimal(num1, 8, 2)}">num1</h2>
+
+<h2 th:text="${'$'+num2}">num2</h2>
+
+<h1>测试url</h1>
+<div th:text="${url}">百度1</div>
+<div th:utext="${url}">百度2</div>
+<div th:include="order.html" style="border: 1px solid red;width: 800px;height: 300px">
+
+
+
+</div>
+</body>
+</html>
